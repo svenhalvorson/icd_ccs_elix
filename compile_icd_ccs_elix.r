@@ -18,8 +18,6 @@ library('readxl')
 library('haven')
 library('here')
 
-base_dir = 'C:/Users/HALVORS/Documents/icd_ccs_elix/'
-
 # ICD9 diagnoses and procedures:
 icd9_cm_p = 'ICD-9-CM-v32-master-descriptions/CMS32_DESC_LONG_SHORT_DX.xlsx'
 icd9_pcs_p = 'ICD-9-CM-v32-master-descriptions/CMS32_DESC_LONG_SHORT_SG.xlsx'
