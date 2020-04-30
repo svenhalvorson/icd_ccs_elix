@@ -725,7 +725,7 @@ elix = elix %>%
 
 elix_match = icd_ccs %>%
   filter(icd_type == 'cm') %>%
-  select(icd_code_fmt, cms_long_label, ccs_label, hcup_icd_label, icd_ver) %>%
+  select(icd_code_fmt, cms_long_label, ccs_label, hcup_icd_label, icd_ver, icd_type) %>%
   mutate(
     firstchar = substr(icd_code_fmt, 1, 1)
   ) %>%
@@ -762,7 +762,7 @@ elix %>%
 
 # Okay join this back on and we're done!
 elix_match = elix_match %>%
-  select(icd_code_fmt, icd_ver, LABEL) %>%
+  select(icd_code_fmt, icd_ver, icd_type, LABEL) %>%
   rename(elix_comorb = LABEL)
 
 icd_ccs = icd_ccs %>%
